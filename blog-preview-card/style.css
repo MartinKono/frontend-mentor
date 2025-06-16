@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-yellow: #F4D04E;
+    --color-gray-500: #6B6B6B;
+    --color-gray-950: #111111;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-yellow);
+}
+
+.text-style-1 {
+    font-family: "Figtree", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-gray-950);
+}
+
+.text-style-2 {
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-gray-500);
+}
+
+.text-style-3 {
+    font-family: "Figtree", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-gray-950);
+}
+
+.text-style-3-bold {
+    font-family: "Figtree", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-gray-950);
+}
+
+.text-clickable:hover {
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
+#div-blog-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    padding: 24px;
+    border: 1px solid var(--color-gray-950);
+    border-radius: 20px;
+
+    gap: 24px;
+    margin: 0px 24px;
+    
+    min-width: 327px;
+    max-width: 384px;
+
+    box-shadow: 8px 8px black;
+
+    background-color: var(--color-white);
+}
+
+#div-blog-component-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#illustration-image {
+    border-radius: 10px;
+}
+
+.info-tag {
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: var(--color-yellow);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info img {
+    width: 32px;
+}
+
+@media only screen and (max-width: 400px) {
+    .text-style-1 {
+        font-size: 20px;
+    }
+
+    .text-style-2 {
+        font-size: 14px;
+    }
+
+    .text-style-3 {
+        font-size: 12px;
+    }
+
+    .text-style-3-bold {
+        font-size: 12px;
+    }
+
+    .user-info h2 {
+        font-size: 14px;
+    }
+}
