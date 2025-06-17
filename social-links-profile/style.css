@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-grey-700: #333333;
+    --color-grey-800: #1F1F1F;
+    --color-grey-900: #141414;
+    --color-green: #C4F82A;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-grey-900);
+}
+
+.text-style-1 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-white);
+}
+
+.text-style-2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-white);
+}
+
+.text-style-2-bold {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+
+    color: var(--color-white);
+}
+
+.text-style-green {
+    color: var(--color-green);
+}
+
+.links-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 384px;
+    min-width: 327px;
+    padding: 40px;
+    gap: 24px;
+    border-radius: 12px;
+
+    background-color: var(--color-grey-800);
+}
+
+.user-avatar {
+    width: 88px;
+    border-radius: 100%;
+}
+
+.user-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+
+    background-color: var(--color-grey-700);
+}
+
+.link:hover {
+    cursor: pointer; 
+    background-color: var(--color-green);
+}
+
+.link:hover h3 {
+    color: var(--color-grey-700);
+}
+
+@media only screen and (max-width: 375px) {
+    .links-component {
+        padding: 24px;
+    }
+}
