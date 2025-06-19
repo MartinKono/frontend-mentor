@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --color-1: #FFFFFF; /* text */
+    --color-2: #141D2F; /* body background, user stats background */
+    --color-3: #1E2A47; /* panels background */
+    --color-4: #0079FF; /* search button background */
+    --color-5: #90A4D4; /* theme switch button */
+    --color-6: #60ABFF; /* search icon, username */
+    --color-red: #F74646;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-2);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    max-width: 730px;
+    min-width: 343px;
+
+    min-height: 570px;
+
+    gap: 40px;
+    margin-top: 130px;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    border-radius: 3px;
+}
+
+.theme-switch:focus {
+    outline: 2px solid var(--color-4);
+    outline-offset: 3px;
+}
+
+.theme-switch svg {
+    fill: var(--color-5);
+}
+
+.theme-switch:hover {
+    cursor: pointer;
+}
+
+.theme-switch:hover h3,
+.theme-switch:hover svg,
+.theme-switch:focus h3,
+.theme-switch:focus svg {
+    color: var(--color-1);
+    fill: var(--color-1);
+}
+
+.search-bar {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+
+    padding: 8px 12px 8px 24px;
+    border-radius: 16px;
+    gap: 16px;
+
+    box-shadow: var(--light-theme-shadow);
+    background-color: var(--color-3);
+}
+
+.search-bar svg {
+    fill: var(--color-6);
+    min-width: 24px;
+}
+
+.search-bar h3 {
+    color: var(--color-red);
+    text-wrap: nowrap;
+    visibility: hidden;
+    position: absolute;
+}
+
+.search-bar input[type=text] {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+
+    color: var(--color-1);
+}
+
+.search-bar input[type=submit] {
+    background-color: var(--color-4);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+
+    color: #FFFFFF;
+}
+
+.search-bar input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--color-6);
+}
+
+.search-bar input[type=submit]:focus {
+    outline: 2px solid var(--color-4);
+    outline-offset: 3px;
+}
+
+.user-info {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    border-radius: 16px;
+
+    grid-template-areas: 
+        "a b b b"
+        "a c c c"
+        "a d d d"
+        "a e e e";
+
+    grid-template-columns: 117px;
+
+    gap: 24px 32px;
+    padding: 48px;
+    margin-bottom: 60px;
+
+    box-shadow: var(--light-theme-shadow);
+    background-color: var(--color-3);
+}
+
+.user-avatar {
+    grid-area: a;
+}
+
+.user-avatar img {
+    width: 117px;
+    height: 117px;
+    border-radius: 100%;
+}
+
+.user-info-top {
+    grid-area: b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info-top h3 {
+    color: var(--color-1);
+}
+
+.user-info-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-info-name h3 {
+    color: var(--color-6);
+}
+
+.user-bio {
+    grid-area: c;
+    color: var(--color-1);
+}
+
+.user-stats {
+    grid-area: d;
+    display: flex;
+    align-items: center;
+
+    padding: 16px 32px;
+    border-radius: 10px;
+
+    background-color: var(--color-2);
+}
+
+.user-stats-cell {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.user-stats-cell h2 {
+    color: var(--color-1);
+}
+
+.user-stats-cell h3 {
+    color: var(--color-1);
+}
+
+.user-links {
+    grid-area: e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+    word-wrap: break-word;
+}
+
+.user-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-link h3,
+.user-link svg,
+.user-link a {
+    color: var(--color-1);
+    fill: var(--color-1);
+}
+
+.user-link a {
+    text-decoration: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.user-link a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+} 
+
+.user-link a:focus {
+    outline: 2px solid var(--color-4);
+    outline-offset: 3px;
+}
+
+.user-link svg {
+    min-width: 24px;
+}
+
+.text-style-1 {
+    font-family: "Space Mono", monospace;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0px;
+
+    color: var(--color-1);
+}
+
+.text-style-2 {
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+
+.text-style-3 {
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0px;
+}
+
+.text-style-4 {
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-style-5 {
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-style-6 {
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-style-7 {
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+
+.text-style-8 {
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 2.5px;
+
+    color: var(--color-5);
+}
+
+@media only screen and (max-width: 700px) {
+
+    .app {
+        margin-top: 32px;
+    }
+
+    .user-info-top {
+        flex-direction: column;
+        justify-content: start;
+        gap: 4px;
+    }
+
+    .user-info {
+        width: 100%;
+        height: 100%;
+        display: grid;
+
+        border-radius: 16px;
+
+        grid-template-areas: 
+            "a b"
+            "c c"
+            "d d"
+            "e e";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .user-info {
+        padding: 32px 24px;
+
+        grid-template-columns: 70px;
+
+        gap: 32px 20px;
+    }
+
+    .user-avatar img {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+
+    .user-links {
+        grid-template-columns: 1fr;
+    }
+
+    .user-stats {
+        flex-direction: column;
+        gap: 16px;
+    }    
+}
