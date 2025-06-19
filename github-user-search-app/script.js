@@ -80,7 +80,7 @@ const submitHandler = async (e) => {
     
     let url = `https://api.github.com/users/${username}`
     const response = await fetch(url)
-    if (response.status === 404) {
+    if (response.status !== 200) {
         error.style.visibility = "visible"
         error.style.position = "relative"
         return
@@ -97,7 +97,7 @@ const submitHandler = async (e) => {
     userElements.location.innerText = (!json.location) ? "---" : json.location
     userElements.twitter.innerText = (!json.twitter_username) ? "---" : json.twitter_username
     userElements.website.innerText = (!json.blog) ? "---" : json.blog
-    userElements.website.href = (!json.blog) ? "---" : json.blog
+    userElements.website.href = (!json.blog) ? "" : json.blog
     userElements.company.innerText = (!json.company) ? "---" : json.company
     userElements.avatar.src = (!json.avatar_url) ? "---" : json.avatar_url
     
